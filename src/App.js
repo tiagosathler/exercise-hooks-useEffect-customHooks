@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Posts from './components/Posts';
 import Selector from './components/Selector';
-import { Context } from './components/RedditContext';
+import RedditContext from './context/RedditContext';
 
 class App extends Component {
   componentDidMount() {
@@ -59,6 +59,6 @@ class App extends Component {
   }
 }
 
-App.contextType = Context;
+App.contextType = RedditContext;
 
 export default App;

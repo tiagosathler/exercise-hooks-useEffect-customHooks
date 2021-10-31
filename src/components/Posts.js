@@ -1,15 +1,15 @@
 import React from 'react';
 
-import { Consumer } from './RedditContext';
+import RedditContext from '../context/RedditContext';
 
 const Posts = () => (
-  <Consumer>
+  <RedditContext.Consumer>
     {({ posts }) => (
       <ul>
         {posts.map(({ id, title }) => <li key={id}>{title}</li>)}
       </ul>
     )}
-  </Consumer>
+  </RedditContext.Consumer>
 );
 
 export default Posts;
