@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Consumer } from './RedditContext';
+import RedditContext from '../context/RedditContext';
 
 const renderOptions = (options) => (
   options.map((option) => (
@@ -14,7 +14,7 @@ const renderOptions = (options) => (
 );
 
 const Selector = () => (
-  <Consumer>
+  <RedditContext.Consumer>
     {({ selectedSubreddit, availableSubreddits, selectSubreddit }) => (
       <span>
         <h1>{`Selected: ${selectedSubreddit}`}</h1>
@@ -26,7 +26,7 @@ const Selector = () => (
         </select>
       </span>
     )}
-  </Consumer>
+  </RedditContext.Consumer>
 );
 
 export default Selector;
